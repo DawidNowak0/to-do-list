@@ -1,0 +1,61 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+    text-align: center;
+}
+
+:root{
+    --primary-color: gray;
+    --header-font-color: lightgrey;
+    --font-color: black;
+}
+
+body{
+    background: -webkit-linear-gradient(top left, #843B1C, #BE9CEB);
+    color: var(--font-color);
+}
+
+header{
+    color: var(--header-font-color);
+}
+
+.newToDo{
+    padding: 2vh;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+section{
+    width: 30vw;
+    min-height: 20vh;
+    margin: 2vw;
+    box-shadow: 7px 7px 39px 3px rgba(0,0,0,0.72);
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: grid;
+    word-break: break-all;
+    border-radius: 0.5vw;
+}
+
+button{
+    font-size: 2vh;
+    border: none;
+    margin: 2px;
+    border-radius: 0.5vw;
+    padding:5px;
+}
+
+button:hover{
+    background-color: lightgray;
+}
+
+p{
+    border-top: solid 2px black;
+    padding: 1vh;
+}
