@@ -1,15 +1,15 @@
+:root{
+    --primary-color: gray;
+    --header-font-color: lightgrey;
+    --font-color: black;
+}
+
 *, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Alkatra', cursive;
     text-align: center;
-}
-
-:root{
-    --primary-color: gray;
-    --header-font-color: lightgrey;
-    --font-color: black;
 }
 
 body{
@@ -66,3 +66,28 @@ p{
     overflow-y: scroll;
     max-height: 70vh;
 }
+
+form{
+    max-width: 70vw;
+    min-width: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.title{
+    min-height: 5vh;
+}
+
+.content{
+    min-height: 20vh;
+}
+
+.send{
+    height: 5vh;
+    margin: 7.5vh;
+}
+
+select, textarea{
+    margin: 1vh;
+}
+
