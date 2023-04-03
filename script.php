@@ -56,18 +56,3 @@
         $conn -> close();
     };
 ?>
-
-<!-- 
-    
-    <section>
-        <div class="name">
-            <h2>Title</h2>
-        </div>
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus non bibendum nisi. Donec enim nisi, commodo id semper quis, efficitur a arcu. Nulla pretium efficitur iaculis. Etiam eget cursus mi. Donec sed congue tortor, non vestibulum enim. Phasellus ultricies, nunc aliquam vulputate elementum, eros justo maximus purus, vitae hendrerit justo.</p>
-        </div>
-        <button>Move</button>
-        <button>Delete</button>
-    </section>
-
--->
