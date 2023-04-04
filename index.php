@@ -21,19 +21,19 @@
     <main>
         <div class="scroll" name="toDo">
             <?php
-                showToDo("to_do")
+                showTask("to_do")
             ?>
         </div>
 
         <div class="scroll" name="inProgress">
             <?php
-                showToDo("in_progress")
+                showTask("in_progress")
             ?>
         </div>
 
         <div class="scroll" name="Done">
             <?php
-                showToDo("done")
+                showTask("done")
             ?>
         </div>
     </main>
