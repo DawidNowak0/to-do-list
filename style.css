@@ -41,7 +41,6 @@ section{
     background-color: var(--primary-color);
     padding: 10px;
     display: grid;
-    word-break: break-all;
     border-radius: 0.5vw;
 }
 

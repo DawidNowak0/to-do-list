@@ -1,6 +1,6 @@
 <?php
     function showTask($table){
-        $conn = mysqli_connect("localhost", "root", "aaaa", "to_do_list");
+        $conn = mysqli_connect("localhost", "root", "", "to_do_list");
         $SQL = $conn->query("SELECT title, details FROM $table");
 
 
