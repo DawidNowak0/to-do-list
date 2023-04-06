@@ -19,23 +19,13 @@
         <button onclick="newToDo()">Create new to do</button>
     </div>
     <main>
-        <div class="scroll" name="toDo">
-            <?php
-                showTask("to_do")
-            ?>
-        </div>
+        <?php
+            showTask("to_do");
 
-        <div class="scroll" name="inProgress">
-            <?php
-                showTask("in_progress")
-            ?>
-        </div>
-
-        <div class="scroll" name="Done">
-            <?php
-                showTask("done")
-            ?>
-        </div>
+            showTask("in_progress");
+            
+            showTask("done");
+        ?>
     </main>
 </body>
 </html>
