@@ -1,21 +1,21 @@
 <?php
     function showTask($table){
         $conn = mysqli_connect("localhost", "root", "", "to_do_list");
-        $SQL = $conn->query("SELECT title, details FROM $table");
+        $SQL = $conn->query("SELECT title, details, id FROM $table");
 
 
         echo "<div class='scroll'>";
 
         while($row = mysqli_fetch_row($SQL)){
-            echo "<section>
-                    <div class='toDo'>
+            echo "<section class='$table' id='$row[2]'>
+                    <div>
                         <h2>$row[0]</h2>
                     </div>
                     <div class='content'>
                         <p>$row[1]</p>
                     </div>
-                    <button>Move</button>
-                    <button>Delete</button>
+                    <button name='move'>Move</button>
+                    <button class='delete' name='delete'>Delete</button>
                 </section>";
         };
         
@@ -31,15 +31,19 @@
         $SQL = $conn->query("INSERT INTO `$table`(`title`, `details`) VALUES ('$title','$content')");
 
         if($SQL === TRUE){
-            echo "Dodana do listy";
-
+            header("refresh: 1; url=index.php");
         }
         else{
             echo "Error". $SQL . "<br>". $conn->error;
-
         };
 
         $conn -> close();
+    };
+
+    function deleteTask(){
+            echo "delete";
+
+
     };
 
     if(isset($_POST['send'])){
@@ -58,5 +62,9 @@
             };
             addTask($table);
         };
+    };
+
+    if(isset($_POST['delete'])){
+        deleteTask();
     };
 ?>
