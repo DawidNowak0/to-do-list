@@ -3,20 +3,21 @@
         $conn = mysqli_connect("localhost", "root", "", "to_do_list");
         $SQL = $conn->query("SELECT title, details, id FROM $table");
 
-
         echo "<div class='scroll'>";
 
         while($row = mysqli_fetch_row($SQL)){
-            echo "<section class='$table' id='$row[2]'>
-                    <div>
-                        <h2>$row[0]</h2>
-                    </div>
-                    <div class='content'>
-                        <p>$row[1]</p>
-                    </div>
-                    <button name='move'>Move</button>
-                    <button class='delete' name='delete'>Delete</button>
-                </section>";
+            echo "<form method='post'>
+                    <section>
+                        <div>
+                            <h2>$row[0]</h2>
+                        </div>
+                        <div class='content'>
+                            <p>$row[1]</p>
+                        </div>
+                        <button type='submit' name='move'>Move</button>
+                        <button type='submit' name='delete' value='DELETE FROM `$table` WHERE `id` = $row[2]'>Delete</button>
+                    </section>
+                </form>";
         };
         
         echo "</div>";
@@ -41,8 +42,16 @@
     };
 
     function deleteTask(){
-            echo "delete";
+        $id = $_POST['delete'];
 
+        $conn = mysqli_connect("localhost", "root", "", "to_do_list");
+        $SQL = $conn->query("$id");
+
+        header("refresh: 1; url=index.php");
+    };
+
+    function moveTask(){
+        header("refresh: 1; url=index.php");
 
     };
 
@@ -66,5 +75,9 @@
 
     if(isset($_POST['delete'])){
         deleteTask();
+    };
+
+    if(isset($_POST['move'])){
+        moveTask();
     };
 ?>

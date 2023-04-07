@@ -21,6 +21,7 @@ body{
 
 header{
     color: var(--header-font-color);
+    max-height: 20vh;
 }
 
 .newToDo{
@@ -35,7 +36,7 @@ main{
 
 section{
     width:27vw;
-    min-height: 20vh;
+    min-height: 10vh;
     margin: 2vw;
     box-shadow: 7px 7px 39px 3px rgba(0,0,0,0.72);
     background-color: var(--primary-color);
@@ -63,10 +64,10 @@ p{
 
 .scroll{
     overflow-y: scroll;
-    max-height: 70vh;
+    max-height: 80vh;
 }
 
-form{
+.form{
     max-width: 70vw;
     min-width: 70vh;
     display: grid;
@@ -89,4 +90,3 @@ form{
 select, textarea{
     margin: 1vh;
 }
-

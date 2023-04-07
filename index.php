@@ -14,10 +14,10 @@
 <body>
     <header>
         <h1>To Do List</h1>
+        <div class="newToDo">
+            <button onclick="newToDo()">Create new to do</button>
+        </div>
     </header>
-    <div class="newToDo">
-        <button onclick="newToDo()">Create new to do</button>
-    </div>
     <main>
         <?php
             showTask("to_do");
