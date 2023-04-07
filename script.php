@@ -46,8 +46,6 @@
 
         $conn = mysqli_connect("localhost", "root", "", "to_do_list");
         $SQL = $conn->query("$id");
-
-        header("refresh: 1; url=index.php");
     };
 
     function moveTask(){
