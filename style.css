@@ -42,6 +42,7 @@ section{
     background-color: var(--primary-color);
     padding: 10px;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     border-radius: 0.5vw;
 }
 
@@ -65,6 +66,7 @@ p{
 .scroll{
     overflow-y: scroll;
     max-height: 80vh;
+    min-width: 32vh;
 }
 
 .form{
@@ -89,4 +91,8 @@ p{
 
 select, textarea{
     margin: 1vh;
+}
+
+.toDo, .content, h3, .delete{
+    grid-column: 1/3;
 }
