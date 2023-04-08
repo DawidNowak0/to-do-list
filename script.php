@@ -30,7 +30,7 @@
                         <div class='toDo'>
                             <h2>$row[0]</h2>
                         </div>
-                        <div class='content'>
+                        <div class='details'>
                             <p>$row[1]</p>
                         </div>
                         <h3>Move to</h3>
