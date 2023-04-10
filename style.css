@@ -93,12 +93,16 @@ select, textarea{
     margin: 1vh;
 }
 
-.toDo, .details, h3, .delete{
+.toDo, .details, h4, .delete{
     grid-column: 1/3;
 }
 
 .details{
     min-height: 10vh;
+}
+
+h4{
+    font-size: medium;
 }
 
 *{

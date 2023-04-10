@@ -28,12 +28,12 @@
             echo "<form method='post'>
                     <section>
                         <div class='toDo'>
-                            <h2>$row[0]</h2>
+                            <h3>$row[0]</h3>
                         </div>
                         <div class='details'>
                             <p>$row[1]</p>
                         </div>
-                        <h3>Move to</h3>
+                        <h4>Move to</h4>
                         <button type='submit' class='moveBtn' name='move' value='$btn[0] $table $row[2]'>$btnName[0]</button>
                         <button type='submit' class='moveBtn' name='move' value='$btn[1] $table $row[2]'>$btnName[1]</button>
                         <button type='submit' class='delete' name='delete' value='DELETE FROM `$table` WHERE `id` = $row[2]'>Delete</button>
