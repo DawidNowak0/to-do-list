@@ -1,7 +1,12 @@
 :root{
-    --primary-color: gray;
     --header-font-color: lightgrey;
     --font-color: black;
+    --list-color: gray;
+    --scroll-primary: #be9ceb;
+    --scroll-secondary: #673b79;
+    --button-hover: lightgrey;
+    --gradient-prinary: #843B1C;
+    --gradient-secondary: #BE9CEB;
 }
 
 *, ::before, ::after{
@@ -13,7 +18,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #843B1C, #BE9CEB);
+    background-image: linear-gradient(to right, var(--gradient-prinary), var(--gradient-secondary));
     color: var(--font-color);
     max-width: 100vw;
 }
@@ -38,7 +43,7 @@ section{
     min-height: 10vh;
     margin: 2vw;
     box-shadow: 7px 7px 39px 3px rgba(0,0,0,0.72);
-    background-color: var(--primary-color);
+    background-color: var(--list-color);
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -54,7 +59,7 @@ button{
 }
 
 button:hover{
-    background-color: lightgray;
+    background-color: var(--button-hover);
 }
 
 p{
@@ -106,7 +111,7 @@ h4{
 
 *{
     scrollbar-width: auto;
-    scrollbar-color: #673b79 #be9ceb;
+    scrollbar-color: var(--scrol-secondary) var(--scroll-primary);
 }
 
 *::-webkit-scrollbar{
@@ -114,13 +119,13 @@ h4{
 }
 
 *::-webkit-scrollbar-track{
-    background: #be9ceb;
+    background: var(--scroll-primary);
 }
 
 *::-webkit-scrollbar-thumb{
-    background-color: #673b79;
+    background-color: var(--scroll-secondary);
     border-radius: 10px;
-    border: 1px none #ffffff;
+    border: 1px none;
 }
 
 
@@ -140,7 +145,7 @@ h4{
     }
 
     section{
-        width: 95vw;
+        width: 90vw;
         margin: 5 auto 5 auto;
     }
 
